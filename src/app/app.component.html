@@ -1,0 +1,33 @@
+<div class="row">
+
+  <div class="col s12 ">
+    <div style="padding-top: 10px" class="valign center-align">
+      <img  src="../assets/images/key.png">
+    </div>   
+  
+    <div class="row">
+      <div class="col s12 m7">
+        <div style="background-color:black !important" class="card-panel">
+          <app-grafico *ngIf="serieChartSpeed" (onChange)="serieChartSpeed" [series]="serieChartSpeed" [opcoes]="optionsChartSpeed" ></app-grafico>
+        </div>
+      </div>
+      <div class="col s12 m5">
+        <div style="background-color:black !important" class="card-panel">
+          <div *ngIf="cars" class="collection">
+            <a href="#!" class="collection-item">
+                <span  [ngClass]="[cars.userConected ? 'connected' : 'disconnected' ]">
+                  <h6>User connected: Connected</h6>
+                </span>
+            </a>
+            <a href="#!" class="collection-item">Air Bag status: 
+              <span  [ngClass]="[cars.airbagStatus ? 'connected' : 'disconnected' ]"  >
+                Ok </span> 
+              </a>
+            <a href="#!" class="collection-item">Ignition:  <span *ngIf="cars.ignition" > On </span> <span *ngIf="!cars.ignition"  > OFF </span> </a>
+          </div>
+        </div>
+    </div>
+</div>
+  </div>
+
+</div>
